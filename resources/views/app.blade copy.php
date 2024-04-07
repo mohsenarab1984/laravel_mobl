@@ -42,7 +42,27 @@
     <link rel="stylesheet" href="{{ asset('assets/css/jquery-ui.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
            
-   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="{{ asset('assets/js/vendor/modernizr-3.7.1.min.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/vendor/jquery-3.4.1.min.js') }}"></script> --}}
+    {{-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script> --}}
+    <script src="{{ asset('assets/js/vendor/popper.js') }}"></script>
+    <script src="{{ asset('assets/js/vendor/bootstrap.min.js') }}"></script>
+
+    <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.scrollup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/images-loaded.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.nice-select.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/mailchimp-ajax.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-waypoints.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('assets/js/ajax-mail.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
+
   
     
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -59,35 +79,12 @@
        <!-- footer section start -->
        {{-- @include('includes.footer') --}}
    
-    
-
-
-{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> --}}
-<script src="{{ asset('assets/js/vendor/modernizr-3.7.1.min.js') }}"></script>
-<script src="{{ asset('assets/js/vendor/jquery-3.4.1.min.js') }}"></script>
-{{-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script> --}}
-<script src="{{ asset('assets/js/vendor/popper.js') }}"></script>
-<script src="{{ asset('assets/js/vendor/bootstrap.min.js') }}"></script>
-
-<script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
-<script src="{{ asset('assets/js/slick.min.js') }}"></script>
-<script src="{{ asset('assets/js/wow.min.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.scrollup.min.js') }}"></script>
-<script src="{{ asset('assets/js/images-loaded.min.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.nice-select.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
-<script src="{{ asset('assets/js/mailchimp-ajax.js') }}"></script>
-<script src="{{ asset('assets/js/jquery.counterup.min.js') }}"></script>
-<script src="{{ asset('assets/js/jquery-waypoints.js') }}"></script>
-<script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
-<script src="{{ asset('assets/js/ajax-mail.js') }}"></script>
-<script src="{{ asset('assets/js/main.js') }}"></script>
-
-<script>
-  // $(document).ready(function(){
-  //    alert()
-  // });
-</script>
+       <script>
+        $(document).ready(function(){
+           alert('Hii')
+        });
+    </script>
+   
    
   </body>
 </html>
