@@ -21,14 +21,6 @@ export default {
             editorData: "<p>Content of the editor.</p>",
             editorConfig: {
                 toolbar: {
-        //             items: [
-        //             'undo', 'redo',
-        // '|', 'heading',
-        // '|', 'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor',
-        // '|', 'bold', 'italic', 'strikethrough', 'subscript', 'superscript', 'code',
-        // '|', 'link', 'uploadImage', 'blockQuote', 'codeBlock',
-        // '|', 'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent'
-        //             ],
                     items: [
                         "heading",
                         "|",
@@ -44,6 +36,10 @@ export default {
                         "outdent",
                         "|",
                         "alignment",
+                        "alignment:left",
+                        "alignment:right",
+                        "alignment:center",
+                        "alignment:justify",
                         "|",
                         "undo",
                         "redo",

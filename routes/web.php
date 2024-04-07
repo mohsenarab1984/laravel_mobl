@@ -33,9 +33,7 @@ Route::get('/blog', function () {
 // });
 
 
-// Route::get('admin/blog/create',function(){
-//    return view('admin.blog.create');
-// });
+
 Route::get('admin/blog/create',function(){
     // Inertia::setRootView('app_admin');
    
@@ -52,6 +50,16 @@ Route::post('admin/blog/create',[BlogController::class,'create'])->name('admin.b
 
 
 Route::post('/api/editor/upload',[PhotoController::class,'uploadPhoto'])->name('editor.upload');
+
+
+
+//////////// [Ordinary Request]
+Route::get('/admin2/blog/create',function(){
+    return view('admin.blog.create');
+ });
+
+
+
 
 Route::get('/test', function () {
    dd( Mobl::find(1)->my_media->pluck('url')->toArray(),Blog::find(1)->my_media->pluck('url')->toArray() );
