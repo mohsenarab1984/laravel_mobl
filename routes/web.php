@@ -33,13 +33,13 @@ Route::get('/blog', function () {
 // });
 
 
+// Route::get('admin/blog/create',function(){
+//    return view('admin.blog.create');
+// });
 Route::get('admin/blog/create',function(){
-   return view('admin.blog.create');
-});
-Route::get('admin/blog/create2',function(){
     // Inertia::setRootView('app_admin');
    
-    return Inertia::render('Admin/Blog/Create2');
+    return Inertia::render('Admin/Blog/Create');
   //  return Inertia::render('Admin/Test');
 });
 Route::get('admin/blog/create3',function(){

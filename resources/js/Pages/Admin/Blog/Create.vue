@@ -1,39 +1,70 @@
 <template>
-    <div>
+    <div id="app">
         <ckeditor
             :editor="editor"
             v-model="editorData"
-            @ready="onEditorReady"
-        />
+            :config="editorConfig"
+        ></ckeditor>
     </div>
+    <hr />
+    <div v-html="editorData"></div>
 </template>
 
-<script setup>
-import CKEditor from "@ckeditor/ckeditor5-vue";
+<script>
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
-
-let editor = ClassicEditor;
-let editorData = ref("");
-
-function onEditorReady(editor) {
-    editor.plugins.get("FileRepository").createUploadAdapter = (loader) => {
-        return new UploadAdapter(loader);
-    };
-}
-
-class UploadAdapter {
-    constructor(loader) {
-        this.loader = loader;
-    }
-
-    upload() {
-        alert("upload function");
-        // Implement your image/video upload logic here
-    }
-
-    abort() {
-        alert("abort function");
-        // Implement abort logic if needed
-    }
-}
+// import $ from "jquery";
+export default {
+    name: "app",
+    data() {
+        return {
+            editor: ClassicEditor,
+            editorData: "<p>Content of the editor.</p>",
+            editorConfig: {
+                toolbar: {
+                    items: [
+                        "heading",
+                        "|",
+                        "bold",
+                        "italic",
+                        "underline",
+                        "link",
+                        "|",
+                        "bulletedList",
+                        "numberedList",
+                        "|",
+                        "indent",
+                        "outdent",
+                        "|",
+                        "alignment",
+                        "alignment:left",
+                        "alignment:right",
+                        "alignment:center",
+                        "alignment:justify",
+                        "|",
+                        "undo",
+                        "redo",
+                        "|",
+                        "codeBlock",
+                        "|",
+                        "imageUpload",
+                        "mediaEmbed",
+                    ],
+                },
+                language: "en",
+                placeholder: "Start typing here...",
+                ckfinder: {
+                    uploadUrl:
+                        "/api/editor/upload?_token=" +
+                        this.$page.props.csrf_token,
+                    options: {
+                        resourceType: "Images",
+                        upload: {
+                            fileName: "photo", // Set the name of the uploaded file to 'photo'
+                        },
+                    },
+                },
+            },
+        };
+    },
+};
 </script>

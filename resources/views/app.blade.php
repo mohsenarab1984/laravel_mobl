@@ -62,10 +62,8 @@
     
 
 
-{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> --}}
 <script src="{{ asset('assets/js/vendor/modernizr-3.7.1.min.js') }}"></script>
 <script src="{{ asset('assets/js/vendor/jquery-3.4.1.min.js') }}"></script>
-{{-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script> --}}
 <script src="{{ asset('assets/js/vendor/popper.js') }}"></script>
 <script src="{{ asset('assets/js/vendor/bootstrap.min.js') }}"></script>
 

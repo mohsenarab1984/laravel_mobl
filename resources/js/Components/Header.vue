@@ -50,6 +50,7 @@
                                 <li class="menu-item-has-children">
                                     <a href="#">Contact Us</a>
                                 </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -77,9 +78,7 @@
                             <nav>
                                 <ul class="d-flex">
                                     <li>
-                                        <a class="active" href="index.html"
-                                            >Home</a
-                                        >
+                                        <Link href="/" >   خانه    </Link>
                                         <ul class="sub_menu">
                                             <li><a href="#">Home 1</a></li>
                                             <li><a href="#">Home 2</a></li>
@@ -119,6 +118,18 @@
                                         </ul>
                                     </li>
                                     <li><a href="#">Contact Us</a></li>
+                                    <li>
+                                        <a href="#">Admin</a>
+                                        <ul class="sub_menu">
+                                            <li>
+                                              
+                                                <Link href="/admin/blog/create" > ساخت پست جدید </Link>
+                                            </li>
+                                            <li>
+                                                <a href="#">Blog Details</a>
+                                            </li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
