@@ -57,6 +57,9 @@ Route::post('/api/editor/upload',[PhotoController::class,'uploadPhoto'])->name('
 Route::get('/admin2/blog/create',function(){
     return view('admin.blog.create');
  });
+Route::get('/admin3/blog/create',function(){
+    return view('admin.blog.create_quill');
+ });
 
 
 
