@@ -95,9 +95,10 @@
             function showContent(){
                 // const editorContent  = quill.getText();
                 const editorContent  = $('#editor .ql-editor').html();
+                const editorContent2  = quill.getSemanticHTML();
                 
                 console.log('editorContent: ',editorContent)
-                 $('#view_output').html(editorContent)
+                 $('#view_output').html(editorContent2)
             }
     
             function getContentAndSend() {

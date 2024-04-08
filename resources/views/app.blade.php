@@ -41,6 +41,11 @@
     <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/jquery-ui.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+
+    {{-- <link rel="stylesheet" href="{{ asset('assets_blog/css/tiny-slider.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets_blog/css/style.css') }}">
+
+     --}}
            
    
   
@@ -80,6 +85,10 @@
 <script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
 <script src="{{ asset('assets/js/ajax-mail.js') }}"></script>
 <script src="{{ asset('assets/js/main.js') }}"></script>
+
+{{-- <script src="{{ asset('assets_blog/js/tiny-slider.js') }}"></script>
+<script src="{{ asset('assets_blog/js/custom.js') }}"></script> --}}
+
 
 <script>
   // $(document).ready(function(){

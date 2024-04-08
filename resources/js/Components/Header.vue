@@ -111,6 +111,7 @@
                                     <li>
                                         <a href="blog.html">blog</a>
                                         <ul class="sub_menu">
+                                            <li><Link href="/blog">بلاگ</Link></li>
                                             <li><a href="#">Blog Pages</a></li>
                                             <li>
                                                 <a href="#">Blog Details</a>
