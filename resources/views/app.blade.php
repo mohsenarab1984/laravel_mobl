@@ -42,6 +42,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/jquery-ui.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.5/dist/quill.snow.css">
+
     {{-- <link rel="stylesheet" href="{{ asset('assets_blog/css/tiny-slider.css') }}">
     <link rel="stylesheet" href="{{ asset('assets_blog/css/style.css') }}">
 
@@ -85,6 +87,10 @@
 <script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
 <script src="{{ asset('assets/js/ajax-mail.js') }}"></script>
 <script src="{{ asset('assets/js/main.js') }}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.5/dist/quill.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 
 {{-- <script src="{{ asset('assets_blog/js/tiny-slider.js') }}"></script>
 <script src="{{ asset('assets_blog/js/custom.js') }}"></script> --}}

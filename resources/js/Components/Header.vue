@@ -112,6 +112,7 @@
                                         <a href="blog.html">blog</a>
                                         <ul class="sub_menu">
                                             <li><Link href="/blog">بلاگ</Link></li>
+                                          
                                             <li><a href="#">Blog Pages</a></li>
                                             <li>
                                                 <a href="#">Blog Details</a>
@@ -120,11 +121,13 @@
                                     </li>
                                     <li><a href="#">Contact Us</a></li>
                                     <li>
-                                        <a href="#">Admin</a>
+                                        <a href="#">ادمین</a>
                                         <ul class="sub_menu">
                                             <li>
                                               
                                                 <Link href="/admin/blog/create" > ساخت پست جدید </Link>
+                                                <li><Link href="/admin/blog/create/quill">ساخت پست با quill</Link></li>
+                                                <li><a href="/admin2/blog/create/">ساخت پست با رفرش  </a></li>
                                             </li>
                                             <li>
                                                 <a href="#">Blog Details</a>

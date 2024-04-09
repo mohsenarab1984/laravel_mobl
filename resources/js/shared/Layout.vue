@@ -10,11 +10,11 @@
     </Head>
     <section class="bg-gray-200">
         <header class="flex justify-between">
-            <h1 class="font-bold text-lg">my Site</h1>
+            <!-- <h1 class="font-bold text-lg">my Site</h1> -->
             <!-- <p>weclome {{ username }}</p> -->
-            <h1>Welcome, {{ user }}</h1>
+            <h4>Welcome, {{ user }}</h4>
 
-            <Nav />
+            <!-- <Nav /> -->
         </header>
     </section>
     <section class="p-6">

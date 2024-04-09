@@ -40,6 +40,17 @@ Route::get('admin/blog/create',function(){
     return Inertia::render('Admin/Blog/Create');
   //  return Inertia::render('Admin/Test');
 });
+Route::get('admin/blog/create/quill',function(){
+    // Inertia::setRootView('app_admin');
+   
+    return Inertia::render('Admin/Blog/Create_quill');
+  //  return Inertia::render('Admin/Test');
+});
+
+
+
+
+
 Route::get('admin/blog/create3',function(){
     // Inertia::setRootView('app_admin');
    
