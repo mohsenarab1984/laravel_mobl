@@ -36,15 +36,16 @@
         <button class="ql-image-upload">Upload </button>
         <!-- Custom image toolbar -->
         <div id="image-toolbar" style="display: none;">
-          W: <input type="text" id="image-width">
-          H: <input type="text" id="image-height">
-          Alt: <input type="text" id="image-alt">
+          W: <input type="text" id="image-width" style="width: 60px;height: 20px;">
+          H: <input type="text" id="image-height" style="width: 60px;height: 20px;">
+          Alt: <input type="text" id="image-alt" style="width: 60px;height: 20px;">
         </div>
       </div>
       <div id="editor" ref="editor"></div>
   
       <button @click="showContent" class="btn btn-success">Show Content</button>
       <button @click="getContentAndSend">Send Content</button>
+      <button @click="getSelection_Quill">get  selection</button>
   
       <hr>
       <div id="view_output" style="border: 1px solid #999; width: 1000px; margin: 0 auto"></div>
@@ -79,6 +80,37 @@
       });
   };
   
+
+  function getSelection_Quill(){
+
+       const range = quill.getSelection();
+       console.log('range:',range)
+       const text = quill.getText(range.index, range.length);
+       const selectedContent = quill.getContents(range.index, range.length);
+       console.log('User has highlighted: ', text,selectedContent.ops[0],selectedContent.ops[0]['insert']['image']);
+       console.log('getSemanticHTML: ',quill.getSemanticHTML(range.index, range.length))
+
+       var el = quill.getSemanticHTML(range.index, range.length);
+
+       var input_new = document.createElement('img');
+       input_new.setAttribute('style', 'width:60px; height:20px');
+
+       if(selectedContent.ops[0]['insert']['image']){
+
+           input_new.setAttribute('url', selectedContent.ops[0]['insert']['image']);
+
+           quill.formatText(range.index, 1, 'style', 'width:100px; height:100px');
+           quill.insertEmbed(range.index, 'image', selectedContent.ops[0]['insert']['image']);
+       }
+
+
+       
+       console.log(input_new)
+
+
+
+  }
+
   onMounted(() => {
     quill = new Quill(editor.value, {
       theme: 'snow',
@@ -93,6 +125,12 @@
       const input = document.createElement('input');
       input.setAttribute('type', 'file');
       input.setAttribute('accept', 'image/*');
+      /////
+      const range = quill.getSelection();
+      console.log('range:',range)
+      const text = quill.getText(range.index, range.length);
+       console.log('User has highlighted: ', text);
+      ///////
       input.onchange = () => {
                 const file = input.files[0];
                 const formData = new FormData();
@@ -107,6 +145,8 @@
                     console.log('Response data in image upload:', response.data);
                     const imageUrl = response.data.url;
                     const range = quill.getSelection();
+                   // alert('range: '+range+', range.index: '+range?.index)
+                  
                     quill.insertEmbed(range ? range.index : 0, 'image', imageUrl);
                 })
                 .catch(error => {
@@ -127,19 +167,22 @@
     const widthInput = document.createElement('input');
     widthInput.setAttribute('type', 'number');
     widthInput.setAttribute('id', 'image-width');
+    widthInput.setAttribute('style', 'width:60px; height:20px');
     widthInput.setAttribute('placeholder', 'Width');
     toolbar.appendChild(widthInput);
 
     const heightInput = document.createElement('input');
     heightInput.setAttribute('type', 'number');
     heightInput.setAttribute('id', 'image-height');
+    heightInput.setAttribute('style', 'width:60px; height:20px');
     heightInput.setAttribute('placeholder', 'Height');
     toolbar.appendChild(heightInput);
 
     const altInput = document.createElement('input');
     altInput.setAttribute('type', 'text');
     altInput.setAttribute('id', 'image-alt');
-    altInput.setAttribute('placeholder', 'Alt Text');
+    altInput.setAttribute('style', 'width:60px; height:20px');
+    altInput.setAttribute('placeholder', 'Alt');
     toolbar.appendChild(altInput);
 
     const setAttributesButton = document.createElement('button');
@@ -149,7 +192,7 @@
         const height = document.querySelector('#image-height').value;
         const alt = document.querySelector('#image-alt').value;
 
-        alert('dfdfd')
+       // alert('dfdfd')
         console.log('sdsdsdd')
 
 
